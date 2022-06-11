@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.ncd
+OUTFILE=C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand
+LICENSE=WebPack
+USER_INFO=__0_0_0

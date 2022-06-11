@@ -1,0 +1,1462 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: CAD971Test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CAD971Test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CAD971Test"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : CAD971Test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" into library work
+Parsing entity <VGA_Square>.
+Parsing architecture <Behavioral> of entity <vga_square>.
+Parsing VHDL file "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_controller.vhd" into library work
+Parsing entity <VGA_controller>.
+Parsing architecture <Behavioral> of entity <vga_controller>.
+Parsing VHDL file "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.vhd" into library work
+Parsing entity <CAD971Test>.
+Parsing architecture <CAD971Test> of entity <cad971test>.
+WARNING:HDLCompiler:946 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.vhd" Line 78: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.vhd" Line 88: Actual for formal port reset is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <CAD971Test> (architecture <CAD971Test>) from library <work>.
+
+Elaborating entity <VGA_controller> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_Square> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 55: Using initial value "0000011001" for block0width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 56: Using initial value "0000011001" for block0height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 59: Using initial value "0000011001" for block1width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 60: Using initial value "0000110010" for block1height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 63: Using initial value "0000011001" for block2width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 64: Using initial value "0001001011" for block2height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 67: Using initial value "0000110010" for block3width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 68: Using initial value "0000011001" for block3height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 71: Using initial value "0000110010" for block4width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 72: Using initial value "0000110010" for block4height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 75: Using initial value "0000110010" for block5width since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 76: Using initial value "0001001011" for block5height since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 112: Using initial value "0000000101" for bulletwidth since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 113: Using initial value ("0010100000","0010111001","0011010010","0011101011","0100000100","0100011101","0100110110","0101001111","0101101000","0110000001","0110011010","0110110011","0111001100") for x25 since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 114: Using initial value ("0010100000","0011010010","0100000100","0100110110","0101101000","0110011010","0111001100") for x50 since it is never assigned
+WARNING:HDLCompiler:1127 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 1040: Assignment to squarexmax ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd" Line 1041: Assignment to squareymax ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CAD971Test>.
+    Related source file is "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\CAD971Test.vhd".
+    Summary:
+	no macro.
+Unit <CAD971Test> synthesized.
+
+Synthesizing Unit <VGA_controller>.
+    Related source file is "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_controller.vhd".
+    Found 11-bit register for signal <CurrentVPos>.
+    Found 11-bit register for signal <CurrentHPos>.
+    Found 11-bit adder for signal <CurrentHPos[10]_GND_6_o_add_1_OUT> created at line 48.
+    Found 11-bit adder for signal <CurrentVPos[10]_GND_6_o_add_3_OUT> created at line 51.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_17_OUT<10:0>> created at line 76.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_20_OUT<10:0>> created at line 79.
+    Found 11-bit comparator greater for signal <CurrentHPos[10]_GND_6_o_LessThan_1_o> created at line 47
+    Found 11-bit comparator greater for signal <CurrentVPos[10]_GND_6_o_LessThan_3_o> created at line 50
+    Found 11-bit comparator lessequal for signal <CurrentHPos[10]_GND_6_o_LessThan_10_o> created at line 61
+    Found 11-bit comparator lessequal for signal <CurrentVPos[10]_GND_6_o_LessThan_11_o> created at line 64
+    Found 11-bit comparator lessequal for signal <n0012> created at line 67
+    Found 11-bit comparator greater for signal <CurrentHPos[10]_GND_6_o_LessThan_13_o> created at line 67
+    Found 11-bit comparator lessequal for signal <n0017> created at line 70
+    Found 11-bit comparator greater for signal <CurrentVPos[10]_GND_6_o_LessThan_15_o> created at line 70
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <VGA_controller> synthesized.
+
+Synthesizing Unit <VGA_Square>.
+    Related source file is "C:\Users\Soroush\Work Spaces\ISE Design\CADProject_Soroush Shemshadi_Alireza Khorsand\VGA_Square.vhd".
+WARNING:Xst:647 - Input <SW<6:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <finalstate>.
+    Found 1-bit register for signal <aimode>.
+    Found 18-bit register for signal <gamecounter>.
+    Found 18-bit register for signal <tempspeed>.
+    Found 18-bit register for signal <gamespeed>.
+    Found 25-bit register for signal <timercounter>.
+    Found 25-bit register for signal <initcounter>.
+    Found 27-bit register for signal <dancecounter>.
+    Found 4-bit register for signal <timer0>.
+    Found 4-bit register for signal <timer1>.
+    Found 4-bit register for signal <speedtimer>.
+    Found 4-bit register for signal <bulletindex>.
+    Found 7-bit register for signal <maintimer>.
+    Found 7-bit register for signal <point>.
+    Found 9-bit register for signal <pushdown>.
+    Found 8-bit register for signal <templed>.
+    Found 10-bit register for signal <Block0Y>.
+    Found 10-bit register for signal <Block1Y>.
+    Found 10-bit register for signal <Block2Y>.
+    Found 10-bit register for signal <Block3Y>.
+    Found 10-bit register for signal <Block4Y>.
+    Found 10-bit register for signal <Block5Y>.
+    Found 2-bit register for signal <p_s>.
+    Found 17-bit register for signal <playercounter>.
+    Found 22-bit register for signal <bulletcounter>.
+    Found 16-bit register for signal <bulletmovecounter>.
+    Found 9-bit register for signal <lookahead>.
+    Found 9-bit register for signal <safezone>.
+    Found 10-bit register for signal <PlayerX>.
+    Found 10-bit register for signal <PlayerY>.
+    Found 10-bit register for signal <BulletHoleY>.
+    Found 10-bit register for signal <BulletHoleX>.
+    Found 32-bit register for signal <rand>.
+    Found 8-bit register for signal <sevens1>.
+    Found 8-bit register for signal <sevens2>.
+    Found 8-bit register for signal <sevens3>.
+    Found 8-bit register for signal <sevens4>.
+    Found 8-bit register for signal <temptempled>.
+    Found 10-bit register for signal <Block0X>.
+    Found 10-bit register for signal <Block1X>.
+    Found 10-bit register for signal <Block2X>.
+    Found 10-bit register for signal <Block3X>.
+    Found 10-bit register for signal <Block4X>.
+    Found 10-bit register for signal <Block5X>.
+    Found 17-bit register for signal <aiplayercounter>.
+    Found 14-bit register for signal <lookaheadcounter>.
+    Found 10-bit register for signal <BulletX<0>>.
+    Found 10-bit register for signal <BulletX<1>>.
+    Found 10-bit register for signal <BulletX<2>>.
+    Found 10-bit register for signal <BulletX<3>>.
+    Found 10-bit register for signal <BulletX<4>>.
+    Found 10-bit register for signal <BulletX<5>>.
+    Found 10-bit register for signal <BulletX<6>>.
+    Found 10-bit register for signal <BulletX<7>>.
+    Found 10-bit register for signal <BulletY<0>>.
+    Found 10-bit register for signal <BulletY<1>>.
+    Found 10-bit register for signal <BulletY<2>>.
+    Found 10-bit register for signal <BulletY<3>>.
+    Found 10-bit register for signal <BulletY<4>>.
+    Found 10-bit register for signal <BulletY<5>>.
+    Found 10-bit register for signal <BulletY<6>>.
+    Found 10-bit register for signal <BulletY<7>>.
+    Found 17-bit register for signal <sscounter>.
+    Found 4-bit register for signal <EN>.
+    Found 8-bit register for signal <SevenSeg>.
+    Found finite state machine <FSM_0> for signal <p_s>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 6                                              |
+    | Clock              | CLK_24MHz (rising_edge)                        |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 25-bit adder for signal <initcounter[24]_GND_8_o_add_0_OUT> created at line 150.
+    Found 25-bit adder for signal <timercounter[24]_GND_8_o_add_20_OUT> created at line 274.
+    Found 18-bit adder for signal <gamecounter[17]_GND_8_o_add_21_OUT> created at line 275.
+    Found 4-bit adder for signal <speedtimer[3]_GND_8_o_add_128_OUT> created at line 288.
+    Found 7-bit adder for signal <maintimer[6]_GND_8_o_add_130_OUT> created at line 290.
+    Found 4-bit adder for signal <timer0[3]_GND_8_o_add_131_OUT> created at line 291.
+    Found 4-bit adder for signal <timer1[3]_GND_8_o_add_133_OUT> created at line 293.
+    Found 9-bit adder for signal <pushdown[8]_GND_8_o_add_171_OUT> created at line 324.
+    Found 7-bit adder for signal <point[6]_GND_8_o_add_175_OUT> created at line 328.
+    Found 27-bit adder for signal <dancecounter[26]_GND_8_o_add_737_OUT> created at line 613.
+    Found 10-bit adder for signal <Block0Y[9]_GND_8_o_add_797_OUT> created at line 667.
+    Found 10-bit adder for signal <Block1Y[9]_GND_8_o_add_802_OUT> created at line 687.
+    Found 10-bit adder for signal <Block2Y[9]_GND_8_o_add_807_OUT> created at line 707.
+    Found 10-bit adder for signal <Block3Y[9]_GND_8_o_add_812_OUT> created at line 727.
+    Found 10-bit adder for signal <Block4Y[9]_GND_8_o_add_817_OUT> created at line 741.
+    Found 10-bit adder for signal <Block5Y[9]_GND_8_o_add_822_OUT> created at line 755.
+    Found 22-bit adder for signal <bulletcounter[21]_GND_8_o_add_929_OUT> created at line 803.
+    Found 16-bit adder for signal <bulletmovecounter[15]_GND_8_o_add_930_OUT> created at line 804.
+    Found 17-bit adder for signal <playercounter[16]_GND_8_o_add_931_OUT> created at line 805.
+    Found 17-bit adder for signal <aiplayercounter[16]_GND_8_o_add_932_OUT> created at line 806.
+    Found 14-bit adder for signal <lookaheadcounter[13]_GND_8_o_add_933_OUT> created at line 807.
+    Found 9-bit adder for signal <lookahead[8]_GND_8_o_add_943_OUT> created at line 815.
+    Found 9-bit adder for signal <lookahead[8]_GND_8_o_add_952_OUT> created at line 821.
+    Found 9-bit adder for signal <lookahead[8]_GND_8_o_add_983_OUT> created at line 831.
+    Found 10-bit adder for signal <PlayerX[9]_GND_8_o_add_1022_OUT> created at line 851.
+    Found 10-bit adder for signal <BulletHoleX[9]_GND_8_o_add_1023_OUT> created at line 852.
+    Found 10-bit adder for signal <PlayerX[9]_GND_8_o_add_1034_OUT> created at line 859.
+    Found 4-bit adder for signal <bulletindex[3]_GND_8_o_add_1053_OUT> created at line 861.
+    Found 10-bit adder for signal <Block3X[9]_GND_8_o_add_1555_OUT> created at line 976.
+    Found 10-bit adder for signal <Block4X[9]_GND_8_o_add_1563_OUT> created at line 977.
+    Found 10-bit adder for signal <Block5X[9]_GND_8_o_add_1571_OUT> created at line 978.
+    Found 17-bit adder for signal <sscounter[16]_GND_8_o_add_1673_OUT> created at line 997.
+    Found 10-bit adder for signal <BulletHoleX[9]_GND_8_o_add_1691_OUT> created at line 1014.
+    Found 10-bit adder for signal <BulletHoleY[9]_GND_8_o_add_1693_OUT> created at line 1014.
+    Found 10-bit adder for signal <BulletX[0][9]_GND_8_o_add_1697_OUT> created at line 1015.
+    Found 10-bit adder for signal <BulletY[0][9]_GND_8_o_add_1699_OUT> created at line 1015.
+    Found 10-bit adder for signal <BulletX[1][9]_GND_8_o_add_1703_OUT> created at line 1016.
+    Found 10-bit adder for signal <BulletY[1][9]_GND_8_o_add_1705_OUT> created at line 1016.
+    Found 10-bit adder for signal <BulletX[2][9]_GND_8_o_add_1709_OUT> created at line 1017.
+    Found 10-bit adder for signal <BulletY[2][9]_GND_8_o_add_1711_OUT> created at line 1017.
+    Found 10-bit adder for signal <BulletX[3][9]_GND_8_o_add_1715_OUT> created at line 1018.
+    Found 10-bit adder for signal <BulletY[3][9]_GND_8_o_add_1717_OUT> created at line 1018.
+    Found 10-bit adder for signal <BulletX[4][9]_GND_8_o_add_1721_OUT> created at line 1019.
+    Found 10-bit adder for signal <BulletY[4][9]_GND_8_o_add_1723_OUT> created at line 1019.
+    Found 10-bit adder for signal <BulletX[5][9]_GND_8_o_add_1727_OUT> created at line 1020.
+    Found 10-bit adder for signal <BulletY[5][9]_GND_8_o_add_1729_OUT> created at line 1020.
+    Found 10-bit adder for signal <BulletX[6][9]_GND_8_o_add_1733_OUT> created at line 1021.
+    Found 10-bit adder for signal <BulletY[6][9]_GND_8_o_add_1735_OUT> created at line 1021.
+    Found 10-bit adder for signal <BulletX[7][9]_GND_8_o_add_1739_OUT> created at line 1022.
+    Found 10-bit adder for signal <BulletY[7][9]_GND_8_o_add_1741_OUT> created at line 1022.
+    Found 10-bit adder for signal <PlayerX[9]_GND_8_o_add_1745_OUT> created at line 1023.
+    Found 10-bit adder for signal <PlayerY[9]_GND_8_o_add_1747_OUT> created at line 1023.
+    Found 10-bit adder for signal <n2784[9:0]> created at line 1026.
+    Found 10-bit adder for signal <n2786[9:0]> created at line 1026.
+    Found 11-bit adder for signal <ScanlineY[10]_GND_8_o_add_1757_OUT> created at line 1026.
+    Found 11-bit adder for signal <n2791> created at line 1026.
+    Found 11-bit adder for signal <ScanlineX[10]_GND_8_o_add_1759_OUT> created at line 1026.
+    Found 11-bit adder for signal <ScanlineY[10]_GND_8_o_add_1772_OUT> created at line 1028.
+    Found 11-bit adder for signal <ScanlineY[10]_GND_8_o_add_1777_OUT> created at line 1029.
+    Found 10-bit adder for signal <Block0X[9]_GND_8_o_add_1782_OUT> created at line 1030.
+    Found 10-bit adder for signal <Block0Y[9]_GND_8_o_add_1784_OUT> created at line 1030.
+    Found 10-bit adder for signal <Block1X[9]_GND_8_o_add_1788_OUT> created at line 1031.
+    Found 10-bit adder for signal <Block1Y[9]_GND_8_o_add_1790_OUT> created at line 1031.
+    Found 10-bit adder for signal <Block2X[9]_GND_8_o_add_1794_OUT> created at line 1032.
+    Found 10-bit adder for signal <Block2Y[9]_GND_8_o_add_1796_OUT> created at line 1032.
+    Found 10-bit adder for signal <Block3X[9]_GND_8_o_add_1800_OUT> created at line 1033.
+    Found 10-bit adder for signal <Block3Y[9]_GND_8_o_add_1802_OUT> created at line 1033.
+    Found 10-bit adder for signal <Block4X[9]_GND_8_o_add_1806_OUT> created at line 1034.
+    Found 10-bit adder for signal <Block4Y[9]_GND_8_o_add_1808_OUT> created at line 1034.
+    Found 10-bit adder for signal <Block5X[9]_GND_8_o_add_1812_OUT> created at line 1035.
+    Found 10-bit adder for signal <Block5Y[9]_GND_8_o_add_1814_OUT> created at line 1035.
+    Found 18-bit subtractor for signal <GND_8_o_GND_8_o_sub_138_OUT<17:0>> created at line 297.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_955_OUT<9:0>> created at line 823.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_960_OUT<9:0>> created at line 824.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_965_OUT<9:0>> created at line 825.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_970_OUT<9:0>> created at line 826.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_975_OUT<9:0>> created at line 827.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_980_OUT<9:0>> created at line 828.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1026_OUT<9:0>> created at line 854.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1027_OUT<9:0>> created at line 855.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1158_OUT<9:0>> created at line 871.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1165_OUT<9:0>> created at line 877.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1172_OUT<9:0>> created at line 883.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1179_OUT<9:0>> created at line 889.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1186_OUT<9:0>> created at line 895.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1193_OUT<9:0>> created at line 901.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1200_OUT<9:0>> created at line 907.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_1207_OUT<9:0>> created at line 913.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_1766_OUT<10:0>> created at line 1027.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_1767_OUT<10:0>> created at line 1027.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_1768_OUT<10:0>> created at line 1027.
+    Found 11-bit subtractor for signal <GND_8_o_GND_8_o_sub_1776_OUT<10:0>> created at line 1029.
+    Found 16x10-bit Read Only RAM for signal <rand[3]_GND_8_o_wide_mux_799_OUT>
+    Found 16x10-bit Read Only RAM for signal <rand[6]_GND_8_o_wide_mux_804_OUT>
+    Found 16x10-bit Read Only RAM for signal <rand[9]_GND_8_o_wide_mux_809_OUT>
+    Found 8x10-bit Read Only RAM for signal <rand[11]_GND_8_o_wide_mux_814_OUT>
+    Found 8x10-bit Read Only RAM for signal <rand[13]_GND_8_o_wide_mux_819_OUT>
+    Found 8x10-bit Read Only RAM for signal <rand[15]_GND_8_o_wide_mux_824_OUT>
+    Found 16x8-bit Read Only RAM for signal <_n2990>
+    Found 16x8-bit Read Only RAM for signal <_n2993>
+    Found 16x8-bit Read Only RAM for signal <PWR_9_o_PWR_9_o_mux_84_OUT>
+    Found 16x8-bit Read Only RAM for signal <PWR_9_o_PWR_9_o_mux_106_OUT>
+    Found 16x8-bit Read Only RAM for signal <PWR_9_o_PWR_9_o_mux_126_OUT>
+    Found 8-bit 4-to-1 multiplexer for signal <p_s[1]_templed[7]_wide_mux_857_OUT> created at line 152.
+    Found 7-bit comparator greater for signal <point[6]_GND_8_o_LessThan_23_o> created at line 277
+    Found 25-bit comparator lessequal for signal <n0155> created at line 308
+    Found 18-bit comparator equal for signal <gamespeed[17]_gamecounter[17]_equal_170_o> created at line 321
+    Found 9-bit comparator lessequal for signal <pushdown[8]_PWR_9_o_LessThan_171_o> created at line 323
+    Found 10-bit comparator not equal for signal <Block0Y[9]_PlayerY[9]_equal_175_o> created at line 327
+    Found 10-bit comparator not equal for signal <Block1Y[9]_PlayerY[9]_equal_183_o> created at line 350
+    Found 10-bit comparator not equal for signal <Block2Y[9]_PlayerY[9]_equal_191_o> created at line 373
+    Found 10-bit comparator not equal for signal <Block3Y[9]_PlayerY[9]_equal_199_o> created at line 396
+    Found 10-bit comparator not equal for signal <Block4Y[9]_PlayerY[9]_equal_207_o> created at line 413
+    Found 10-bit comparator not equal for signal <Block5Y[9]_PlayerY[9]_equal_215_o> created at line 430
+    Found 10-bit comparator lessequal for signal <n0210> created at line 447
+    Found 10-bit comparator lessequal for signal <n0212> created at line 447
+    Found 10-bit comparator lessequal for signal <n0214> created at line 447
+    Found 10-bit comparator lessequal for signal <n0216> created at line 447
+    Found 10-bit comparator lessequal for signal <n0221> created at line 448
+    Found 10-bit comparator lessequal for signal <n0223> created at line 448
+    Found 10-bit comparator lessequal for signal <n0225> created at line 448
+    Found 10-bit comparator lessequal for signal <n0227> created at line 448
+    Found 10-bit comparator lessequal for signal <n0233> created at line 449
+    Found 10-bit comparator lessequal for signal <n0235> created at line 449
+    Found 10-bit comparator lessequal for signal <n0237> created at line 449
+    Found 10-bit comparator lessequal for signal <n0239> created at line 449
+    Found 10-bit comparator lessequal for signal <n0245> created at line 450
+    Found 10-bit comparator lessequal for signal <n0247> created at line 450
+    Found 10-bit comparator lessequal for signal <n0249> created at line 450
+    Found 10-bit comparator lessequal for signal <n0251> created at line 450
+    Found 10-bit comparator lessequal for signal <n0257> created at line 451
+    Found 10-bit comparator lessequal for signal <n0259> created at line 451
+    Found 10-bit comparator lessequal for signal <n0261> created at line 451
+    Found 10-bit comparator lessequal for signal <n0263> created at line 451
+    Found 10-bit comparator lessequal for signal <n0269> created at line 452
+    Found 10-bit comparator lessequal for signal <n0271> created at line 452
+    Found 10-bit comparator lessequal for signal <n0273> created at line 452
+    Found 10-bit comparator lessequal for signal <n0275> created at line 452
+    Found 10-bit comparator lessequal for signal <n0281> created at line 453
+    Found 10-bit comparator lessequal for signal <n0283> created at line 453
+    Found 10-bit comparator lessequal for signal <n0285> created at line 453
+    Found 10-bit comparator lessequal for signal <n0287> created at line 453
+    Found 10-bit comparator lessequal for signal <n0293> created at line 454
+    Found 10-bit comparator lessequal for signal <n0295> created at line 454
+    Found 10-bit comparator lessequal for signal <n0297> created at line 454
+    Found 10-bit comparator lessequal for signal <n0299> created at line 454
+    Found 10-bit comparator lessequal for signal <n0308> created at line 474
+    Found 10-bit comparator lessequal for signal <n0310> created at line 474
+    Found 10-bit comparator lessequal for signal <n0312> created at line 474
+    Found 10-bit comparator lessequal for signal <n0314> created at line 474
+    Found 10-bit comparator lessequal for signal <n0319> created at line 475
+    Found 10-bit comparator lessequal for signal <n0321> created at line 475
+    Found 10-bit comparator lessequal for signal <n0323> created at line 475
+    Found 10-bit comparator lessequal for signal <n0325> created at line 475
+    Found 10-bit comparator lessequal for signal <n0331> created at line 476
+    Found 10-bit comparator lessequal for signal <n0333> created at line 476
+    Found 10-bit comparator lessequal for signal <n0335> created at line 476
+    Found 10-bit comparator lessequal for signal <n0337> created at line 476
+    Found 10-bit comparator lessequal for signal <n0343> created at line 477
+    Found 10-bit comparator lessequal for signal <n0345> created at line 477
+    Found 10-bit comparator lessequal for signal <n0347> created at line 477
+    Found 10-bit comparator lessequal for signal <n0349> created at line 477
+    Found 10-bit comparator lessequal for signal <n0355> created at line 478
+    Found 10-bit comparator lessequal for signal <n0357> created at line 478
+    Found 10-bit comparator lessequal for signal <n0359> created at line 478
+    Found 10-bit comparator lessequal for signal <n0361> created at line 478
+    Found 10-bit comparator lessequal for signal <n0367> created at line 479
+    Found 10-bit comparator lessequal for signal <n0369> created at line 479
+    Found 10-bit comparator lessequal for signal <n0371> created at line 479
+    Found 10-bit comparator lessequal for signal <n0373> created at line 479
+    Found 10-bit comparator lessequal for signal <n0379> created at line 480
+    Found 10-bit comparator lessequal for signal <n0381> created at line 480
+    Found 10-bit comparator lessequal for signal <n0383> created at line 480
+    Found 10-bit comparator lessequal for signal <n0385> created at line 480
+    Found 10-bit comparator lessequal for signal <n0391> created at line 481
+    Found 10-bit comparator lessequal for signal <n0393> created at line 481
+    Found 10-bit comparator lessequal for signal <n0395> created at line 481
+    Found 10-bit comparator lessequal for signal <n0397> created at line 481
+    Found 10-bit comparator lessequal for signal <n0406> created at line 501
+    Found 10-bit comparator lessequal for signal <n0408> created at line 501
+    Found 10-bit comparator lessequal for signal <n0410> created at line 501
+    Found 10-bit comparator lessequal for signal <n0412> created at line 501
+    Found 10-bit comparator lessequal for signal <n0417> created at line 502
+    Found 10-bit comparator lessequal for signal <n0419> created at line 502
+    Found 10-bit comparator lessequal for signal <n0421> created at line 502
+    Found 10-bit comparator lessequal for signal <n0423> created at line 502
+    Found 10-bit comparator lessequal for signal <n0429> created at line 503
+    Found 10-bit comparator lessequal for signal <n0431> created at line 503
+    Found 10-bit comparator lessequal for signal <n0433> created at line 503
+    Found 10-bit comparator lessequal for signal <n0435> created at line 503
+    Found 10-bit comparator lessequal for signal <n0441> created at line 504
+    Found 10-bit comparator lessequal for signal <n0443> created at line 504
+    Found 10-bit comparator lessequal for signal <n0445> created at line 504
+    Found 10-bit comparator lessequal for signal <n0447> created at line 504
+    Found 10-bit comparator lessequal for signal <n0453> created at line 505
+    Found 10-bit comparator lessequal for signal <n0455> created at line 505
+    Found 10-bit comparator lessequal for signal <n0457> created at line 505
+    Found 10-bit comparator lessequal for signal <n0459> created at line 505
+    Found 10-bit comparator lessequal for signal <n0465> created at line 506
+    Found 10-bit comparator lessequal for signal <n0467> created at line 506
+    Found 10-bit comparator lessequal for signal <n0469> created at line 506
+    Found 10-bit comparator lessequal for signal <n0471> created at line 506
+    Found 10-bit comparator lessequal for signal <n0477> created at line 507
+    Found 10-bit comparator lessequal for signal <n0479> created at line 507
+    Found 10-bit comparator lessequal for signal <n0481> created at line 507
+    Found 10-bit comparator lessequal for signal <n0483> created at line 507
+    Found 10-bit comparator lessequal for signal <n0489> created at line 508
+    Found 10-bit comparator lessequal for signal <n0491> created at line 508
+    Found 10-bit comparator lessequal for signal <n0493> created at line 508
+    Found 10-bit comparator lessequal for signal <n0495> created at line 508
+    Found 10-bit comparator lessequal for signal <n0504> created at line 528
+    Found 10-bit comparator lessequal for signal <n0506> created at line 528
+    Found 10-bit comparator lessequal for signal <n0508> created at line 528
+    Found 10-bit comparator lessequal for signal <n0510> created at line 528
+    Found 10-bit comparator lessequal for signal <n0515> created at line 529
+    Found 10-bit comparator lessequal for signal <n0517> created at line 529
+    Found 10-bit comparator lessequal for signal <n0519> created at line 529
+    Found 10-bit comparator lessequal for signal <n0521> created at line 529
+    Found 10-bit comparator lessequal for signal <n0527> created at line 530
+    Found 10-bit comparator lessequal for signal <n0529> created at line 530
+    Found 10-bit comparator lessequal for signal <n0531> created at line 530
+    Found 10-bit comparator lessequal for signal <n0533> created at line 530
+    Found 10-bit comparator lessequal for signal <n0539> created at line 531
+    Found 10-bit comparator lessequal for signal <n0541> created at line 531
+    Found 10-bit comparator lessequal for signal <n0543> created at line 531
+    Found 10-bit comparator lessequal for signal <n0545> created at line 531
+    Found 10-bit comparator lessequal for signal <n0551> created at line 532
+    Found 10-bit comparator lessequal for signal <n0553> created at line 532
+    Found 10-bit comparator lessequal for signal <n0555> created at line 532
+    Found 10-bit comparator lessequal for signal <n0557> created at line 532
+    Found 10-bit comparator lessequal for signal <n0563> created at line 533
+    Found 10-bit comparator lessequal for signal <n0565> created at line 533
+    Found 10-bit comparator lessequal for signal <n0567> created at line 533
+    Found 10-bit comparator lessequal for signal <n0569> created at line 533
+    Found 10-bit comparator lessequal for signal <n0575> created at line 534
+    Found 10-bit comparator lessequal for signal <n0577> created at line 534
+    Found 10-bit comparator lessequal for signal <n0579> created at line 534
+    Found 10-bit comparator lessequal for signal <n0581> created at line 534
+    Found 10-bit comparator lessequal for signal <n0587> created at line 535
+    Found 10-bit comparator lessequal for signal <n0589> created at line 535
+    Found 10-bit comparator lessequal for signal <n0591> created at line 535
+    Found 10-bit comparator lessequal for signal <n0593> created at line 535
+    Found 10-bit comparator lessequal for signal <n0602> created at line 549
+    Found 10-bit comparator lessequal for signal <n0604> created at line 549
+    Found 10-bit comparator lessequal for signal <n0606> created at line 549
+    Found 10-bit comparator lessequal for signal <n0608> created at line 549
+    Found 10-bit comparator lessequal for signal <n0613> created at line 550
+    Found 10-bit comparator lessequal for signal <n0615> created at line 550
+    Found 10-bit comparator lessequal for signal <n0617> created at line 550
+    Found 10-bit comparator lessequal for signal <n0619> created at line 550
+    Found 10-bit comparator lessequal for signal <n0625> created at line 551
+    Found 10-bit comparator lessequal for signal <n0627> created at line 551
+    Found 10-bit comparator lessequal for signal <n0629> created at line 551
+    Found 10-bit comparator lessequal for signal <n0631> created at line 551
+    Found 10-bit comparator lessequal for signal <n0637> created at line 552
+    Found 10-bit comparator lessequal for signal <n0639> created at line 552
+    Found 10-bit comparator lessequal for signal <n0641> created at line 552
+    Found 10-bit comparator lessequal for signal <n0643> created at line 552
+    Found 10-bit comparator lessequal for signal <n0649> created at line 553
+    Found 10-bit comparator lessequal for signal <n0651> created at line 553
+    Found 10-bit comparator lessequal for signal <n0653> created at line 553
+    Found 10-bit comparator lessequal for signal <n0655> created at line 553
+    Found 10-bit comparator lessequal for signal <n0661> created at line 554
+    Found 10-bit comparator lessequal for signal <n0663> created at line 554
+    Found 10-bit comparator lessequal for signal <n0665> created at line 554
+    Found 10-bit comparator lessequal for signal <n0667> created at line 554
+    Found 10-bit comparator lessequal for signal <n0673> created at line 555
+    Found 10-bit comparator lessequal for signal <n0675> created at line 555
+    Found 10-bit comparator lessequal for signal <n0677> created at line 555
+    Found 10-bit comparator lessequal for signal <n0679> created at line 555
+    Found 10-bit comparator lessequal for signal <n0685> created at line 556
+    Found 10-bit comparator lessequal for signal <n0687> created at line 556
+    Found 10-bit comparator lessequal for signal <n0689> created at line 556
+    Found 10-bit comparator lessequal for signal <n0691> created at line 556
+    Found 10-bit comparator lessequal for signal <n0700> created at line 570
+    Found 10-bit comparator lessequal for signal <n0702> created at line 570
+    Found 10-bit comparator lessequal for signal <n0704> created at line 570
+    Found 10-bit comparator lessequal for signal <n0706> created at line 570
+    Found 10-bit comparator lessequal for signal <n0711> created at line 571
+    Found 10-bit comparator lessequal for signal <n0713> created at line 571
+    Found 10-bit comparator lessequal for signal <n0715> created at line 571
+    Found 10-bit comparator lessequal for signal <n0717> created at line 571
+    Found 10-bit comparator lessequal for signal <n0723> created at line 572
+    Found 10-bit comparator lessequal for signal <n0725> created at line 572
+    Found 10-bit comparator lessequal for signal <n0727> created at line 572
+    Found 10-bit comparator lessequal for signal <n0729> created at line 572
+    Found 10-bit comparator lessequal for signal <n0735> created at line 573
+    Found 10-bit comparator lessequal for signal <n0737> created at line 573
+    Found 10-bit comparator lessequal for signal <n0739> created at line 573
+    Found 10-bit comparator lessequal for signal <n0741> created at line 573
+    Found 10-bit comparator lessequal for signal <n0747> created at line 574
+    Found 10-bit comparator lessequal for signal <n0749> created at line 574
+    Found 10-bit comparator lessequal for signal <n0751> created at line 574
+    Found 10-bit comparator lessequal for signal <n0753> created at line 574
+    Found 10-bit comparator lessequal for signal <n0759> created at line 575
+    Found 10-bit comparator lessequal for signal <n0761> created at line 575
+    Found 10-bit comparator lessequal for signal <n0763> created at line 575
+    Found 10-bit comparator lessequal for signal <n0765> created at line 575
+    Found 10-bit comparator lessequal for signal <n0771> created at line 576
+    Found 10-bit comparator lessequal for signal <n0773> created at line 576
+    Found 10-bit comparator lessequal for signal <n0775> created at line 576
+    Found 10-bit comparator lessequal for signal <n0777> created at line 576
+    Found 10-bit comparator lessequal for signal <n0783> created at line 577
+    Found 10-bit comparator lessequal for signal <n0785> created at line 577
+    Found 10-bit comparator lessequal for signal <n0787> created at line 577
+    Found 10-bit comparator lessequal for signal <n0789> created at line 577
+    Found 10-bit comparator greater for signal <PlayerX[9]_GND_8_o_LessThan_655_o> created at line 597
+    Found 10-bit comparator greater for signal <GND_8_o_PlayerX[9]_LessThan_656_o> created at line 598
+    Found 10-bit comparator lessequal for signal <n0810> created at line 599
+    Found 10-bit comparator lessequal for signal <n0812> created at line 599
+    Found 10-bit comparator lessequal for signal <n0814> created at line 599
+    Found 10-bit comparator lessequal for signal <n0816> created at line 599
+    Found 10-bit comparator lessequal for signal <n0822> created at line 600
+    Found 10-bit comparator lessequal for signal <n0824> created at line 600
+    Found 10-bit comparator lessequal for signal <n0826> created at line 600
+    Found 10-bit comparator lessequal for signal <n0828> created at line 600
+    Found 10-bit comparator lessequal for signal <n0834> created at line 601
+    Found 10-bit comparator lessequal for signal <n0836> created at line 601
+    Found 10-bit comparator lessequal for signal <n0838> created at line 601
+    Found 10-bit comparator lessequal for signal <n0840> created at line 601
+    Found 10-bit comparator lessequal for signal <n0846> created at line 602
+    Found 10-bit comparator lessequal for signal <n0848> created at line 602
+    Found 10-bit comparator lessequal for signal <n0850> created at line 602
+    Found 10-bit comparator lessequal for signal <n0852> created at line 602
+    Found 10-bit comparator lessequal for signal <n0858> created at line 603
+    Found 10-bit comparator lessequal for signal <n0860> created at line 603
+    Found 10-bit comparator lessequal for signal <n0862> created at line 603
+    Found 10-bit comparator lessequal for signal <n0864> created at line 603
+    Found 10-bit comparator lessequal for signal <n0870> created at line 604
+    Found 10-bit comparator lessequal for signal <n0872> created at line 604
+    Found 10-bit comparator lessequal for signal <n0874> created at line 604
+    Found 10-bit comparator lessequal for signal <n0876> created at line 604
+    Found 27-bit comparator greater for signal <n0919> created at line 614
+    Found 27-bit comparator greater for signal <n0922> created at line 627
+    Found 27-bit comparator greater for signal <n0926> created at line 633
+    Found 27-bit comparator greater for signal <n0930> created at line 646
+    Found 27-bit comparator lessequal for signal <n0934> created at line 652
+    Found 27-bit comparator greater for signal <n0971> created at line 666
+    Found 10-bit comparator greater for signal <GND_8_o_Block0X[9]_LessThan_954_o> created at line 823
+    Found 10-bit comparator lessequal for signal <n1128> created at line 823
+    Found 10-bit comparator lessequal for signal <n1131> created at line 823
+    Found 10-bit comparator greater for signal <GND_8_o_Block1X[9]_LessThan_959_o> created at line 824
+    Found 10-bit comparator lessequal for signal <n1137> created at line 824
+    Found 10-bit comparator lessequal for signal <n1139> created at line 824
+    Found 10-bit comparator greater for signal <GND_8_o_Block2X[9]_LessThan_964_o> created at line 825
+    Found 10-bit comparator lessequal for signal <n1146> created at line 825
+    Found 10-bit comparator lessequal for signal <n1148> created at line 825
+    Found 10-bit comparator greater for signal <GND_8_o_Block3X[9]_LessThan_969_o> created at line 826
+    Found 10-bit comparator lessequal for signal <n1155> created at line 826
+    Found 10-bit comparator lessequal for signal <n1157> created at line 826
+    Found 10-bit comparator greater for signal <GND_8_o_Block4X[9]_LessThan_974_o> created at line 827
+    Found 10-bit comparator lessequal for signal <n1164> created at line 827
+    Found 10-bit comparator lessequal for signal <n1166> created at line 827
+    Found 10-bit comparator greater for signal <GND_8_o_Block5X[9]_LessThan_979_o> created at line 828
+    Found 10-bit comparator lessequal for signal <n1173> created at line 828
+    Found 10-bit comparator lessequal for signal <n1175> created at line 828
+    Found 17-bit comparator greater for signal <PWR_9_o_aiplayercounter[16]_LessThan_1001_o> created at line 835
+    Found 10-bit comparator greater for signal <PlayerX[9]_GND_8_o_LessThan_1004_o> created at line 839
+    Found 10-bit comparator greater for signal <GND_8_o_PlayerX[9]_LessThan_1008_o> created at line 842
+    Found 17-bit comparator greater for signal <PWR_9_o_playercounter[16]_LessThan_1021_o> created at line 848
+    Found 10-bit comparator lessequal for signal <n1493> created at line 976
+    Found 10-bit comparator lessequal for signal <n1499> created at line 977
+    Found 10-bit comparator lessequal for signal <n1505> created at line 978
+    Found 11-bit comparator lessequal for signal <n1580> created at line 1014
+    Found 11-bit comparator lessequal for signal <n1582> created at line 1014
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1693_o> created at line 1014
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1695_o> created at line 1014
+    Found 11-bit comparator lessequal for signal <n1591> created at line 1015
+    Found 11-bit comparator lessequal for signal <n1593> created at line 1015
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1699_o> created at line 1015
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1701_o> created at line 1015
+    Found 11-bit comparator lessequal for signal <n1603> created at line 1016
+    Found 11-bit comparator lessequal for signal <n1605> created at line 1016
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1705_o> created at line 1016
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1707_o> created at line 1016
+    Found 11-bit comparator lessequal for signal <n1615> created at line 1017
+    Found 11-bit comparator lessequal for signal <n1617> created at line 1017
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1711_o> created at line 1017
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1713_o> created at line 1017
+    Found 11-bit comparator lessequal for signal <n1627> created at line 1018
+    Found 11-bit comparator lessequal for signal <n1629> created at line 1018
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1717_o> created at line 1018
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1719_o> created at line 1018
+    Found 11-bit comparator lessequal for signal <n1639> created at line 1019
+    Found 11-bit comparator lessequal for signal <n1641> created at line 1019
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1723_o> created at line 1019
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1725_o> created at line 1019
+    Found 11-bit comparator lessequal for signal <n1651> created at line 1020
+    Found 11-bit comparator lessequal for signal <n1653> created at line 1020
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1729_o> created at line 1020
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1731_o> created at line 1020
+    Found 11-bit comparator lessequal for signal <n1663> created at line 1021
+    Found 11-bit comparator lessequal for signal <n1665> created at line 1021
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1735_o> created at line 1021
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1737_o> created at line 1021
+    Found 11-bit comparator lessequal for signal <n1675> created at line 1022
+    Found 11-bit comparator lessequal for signal <n1677> created at line 1022
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1741_o> created at line 1022
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1743_o> created at line 1022
+    Found 11-bit comparator lessequal for signal <n1687> created at line 1023
+    Found 11-bit comparator lessequal for signal <n1689> created at line 1023
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1747_o> created at line 1023
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1749_o> created at line 1023
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineX[10]_LessThan_1750_o> created at line 1024
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1751_o> created at line 1024
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1752_o> created at line 1025
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineX[10]_LessThan_1753_o> created at line 1025
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineY[10]_LessThan_1755_o> created at line 1026
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1757_o> created at line 1026
+    Found 11-bit comparator greater for signal <ScanlineX[10]_ScanlineY[10]_LessThan_1761_o> created at line 1026
+    Found 11-bit comparator greater for signal <GND_8_o_GND_8_o_LessThan_1769_o> created at line 1027
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineX[10]_LessThan_1770_o> created at line 1028
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1771_o> created at line 1028
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineY[10]_LessThan_1774_o> created at line 1028
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineX[10]_LessThan_1775_o> created at line 1029
+    Found 11-bit comparator greater for signal <GND_8_o_GND_8_o_LessThan_1777_o> created at line 1029
+    Found 11-bit comparator greater for signal <GND_8_o_ScanlineY[10]_LessThan_1780_o> created at line 1029
+    Found 11-bit comparator lessequal for signal <n1738> created at line 1030
+    Found 11-bit comparator lessequal for signal <n1740> created at line 1030
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1784_o> created at line 1030
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1786_o> created at line 1030
+    Found 11-bit comparator lessequal for signal <n1749> created at line 1031
+    Found 11-bit comparator lessequal for signal <n1751> created at line 1031
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1790_o> created at line 1031
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1792_o> created at line 1031
+    Found 11-bit comparator lessequal for signal <n1761> created at line 1032
+    Found 11-bit comparator lessequal for signal <n1763> created at line 1032
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1796_o> created at line 1032
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1798_o> created at line 1032
+    Found 11-bit comparator lessequal for signal <n1773> created at line 1033
+    Found 11-bit comparator lessequal for signal <n1775> created at line 1033
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1802_o> created at line 1033
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1804_o> created at line 1033
+    Found 11-bit comparator lessequal for signal <n1785> created at line 1034
+    Found 11-bit comparator lessequal for signal <n1787> created at line 1034
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1808_o> created at line 1034
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1810_o> created at line 1034
+    Found 11-bit comparator lessequal for signal <n1797> created at line 1035
+    Found 11-bit comparator lessequal for signal <n1799> created at line 1035
+    Found 11-bit comparator greater for signal <ScanlineX[10]_GND_8_o_LessThan_1814_o> created at line 1035
+    Found 11-bit comparator greater for signal <ScanlineY[10]_GND_8_o_LessThan_1816_o> created at line 1035
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_936_o> created at line 810
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_939_o> created at line 812
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_945_o> created at line 816
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_948_o> created at line 818
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_951_o> created at line 820
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_942_o> created at line 814
+    Found 10-bit comparator equal for signal <GND_8_o_GND_8_o_equal_1002_o> created at line 837
+    Summary:
+	inferred  11 RAM(s).
+	inferred  92 Adder/Subtractor(s).
+	inferred 705 D-type flip-flop(s).
+	inferred 344 Comparator(s).
+	inferred 157 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <VGA_Square> synthesized.
+
+Synthesizing Unit <div_7u_4u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_9_o_b[3]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_9_o_b[3]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_9_o_b[3]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_9_o_b[3]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[3]_add_9_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_9_o_add_11_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_9_o_add_13_OUT[6:0]> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  31 Multiplexer(s).
+Unit <div_7u_4u> synthesized.
+
+Synthesizing Unit <mod_7u_4u>.
+    Related source file is "".
+    Found 11-bit adder for signal <GND_10_o_b[3]_add_1_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_10_o_b[3]_add_3_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_10_o_b[3]_add_5_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_10_o_b[3]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[3]_add_9_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_10_o_add_11_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_10_o_add_13_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_10_o_add_15_OUT> created at line 0.
+    Found 11-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  50 Multiplexer(s).
+Unit <mod_7u_4u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 16x10-bit single-port Read Only RAM                   : 3
+ 16x8-bit single-port Read Only RAM                    : 5
+ 8x10-bit single-port Read Only RAM                    : 3
+# Adders/Subtractors                                   : 111
+ 10-bit adder                                          : 48
+ 10-bit subtractor                                     : 16
+ 11-bit adder                                          : 9
+ 11-bit subtractor                                     : 6
+ 14-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 22-bit adder                                          : 1
+ 25-bit adder                                          : 2
+ 27-bit adder                                          : 1
+ 4-bit adder                                           : 4
+ 7-bit adder                                           : 9
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 6
+# Registers                                            : 66
+ 1-bit register                                        : 2
+ 10-bit register                                       : 32
+ 11-bit register                                       : 2
+ 14-bit register                                       : 1
+ 16-bit register                                       : 1
+ 17-bit register                                       : 3
+ 18-bit register                                       : 3
+ 22-bit register                                       : 1
+ 25-bit register                                       : 2
+ 27-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 5
+ 7-bit register                                        : 2
+ 8-bit register                                        : 7
+ 9-bit register                                        : 3
+# Comparators                                          : 368
+ 10-bit comparator equal                               : 7
+ 10-bit comparator greater                             : 10
+ 10-bit comparator lessequal                           : 233
+ 10-bit comparator not equal                           : 6
+ 11-bit comparator greater                             : 50
+ 11-bit comparator lessequal                           : 38
+ 17-bit comparator greater                             : 2
+ 18-bit comparator equal                               : 1
+ 25-bit comparator lessequal                           : 1
+ 27-bit comparator greater                             : 5
+ 27-bit comparator lessequal                           : 1
+ 7-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 8
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 245
+ 1-bit 2-to-1 multiplexer                              : 78
+ 10-bit 2-to-1 multiplexer                             : 58
+ 11-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 3
+ 25-bit 2-to-1 multiplexer                             : 3
+ 27-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 13
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 48
+ 8-bit 4-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 19
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <BulletHoleY_0> in Unit <VGA_SQ> is equivalent to the following 7 FFs/Latches, which will be removed : <BulletHoleY_1> <BulletHoleY_2> <BulletHoleY_3> <BulletHoleY_4> <BulletHoleY_5> <BulletHoleY_7> <BulletHoleY_9> 
+INFO:Xst:2261 - The FF/Latch <PlayerY_0> in Unit <VGA_SQ> is equivalent to the following 7 FFs/Latches, which will be removed : <PlayerY_1> <PlayerY_2> <PlayerY_3> <PlayerY_4> <PlayerY_5> <PlayerY_7> <PlayerY_9> 
+INFO:Xst:2261 - The FF/Latch <PlayerY_6> in Unit <VGA_SQ> is equivalent to the following FF/Latch, which will be removed : <PlayerY_8> 
+INFO:Xst:2261 - The FF/Latch <BulletHoleY_6> in Unit <VGA_SQ> is equivalent to the following FF/Latch, which will be removed : <BulletHoleY_8> 
+WARNING:Xst:1293 - FF/Latch <BulletHoleY_6> has a constant value of 1 in block <VGA_SQ>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <PlayerY_0> has a constant value of 0 in block <VGA_SQ>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <PlayerY_6> has a constant value of 1 in block <VGA_SQ>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <temptempled_7> of sequential type is unconnected in block <VGA_SQ>.
+
+Synthesizing (advanced) Unit <VGA_Square>.
+The following registers are absorbed into counter <bulletcounter>: 1 register on signal <bulletcounter>.
+The following registers are absorbed into counter <bulletmovecounter>: 1 register on signal <bulletmovecounter>.
+The following registers are absorbed into counter <sscounter>: 1 register on signal <sscounter>.
+The following registers are absorbed into counter <timercounter>: 1 register on signal <timercounter>.
+The following registers are absorbed into counter <dancecounter>: 1 register on signal <dancecounter>.
+The following registers are absorbed into counter <timer1>: 1 register on signal <timer1>.
+The following registers are absorbed into counter <maintimer>: 1 register on signal <maintimer>.
+The following registers are absorbed into counter <point>: 1 register on signal <point>.
+The following registers are absorbed into counter <pushdown>: 1 register on signal <pushdown>.
+The following registers are absorbed into counter <lookaheadcounter>: 1 register on signal <lookaheadcounter>.
+The following registers are absorbed into counter <aiplayercounter>: 1 register on signal <aiplayercounter>.
+INFO:Xst:3231 - The small RAM <Mram_rand[3]_GND_8_o_wide_mux_799_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<3:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rand[6]_GND_8_o_wide_mux_804_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<6:3>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rand[11]_GND_8_o_wide_mux_814_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<11:9>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rand[9]_GND_8_o_wide_mux_809_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 10-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<9:6>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rand[13]_GND_8_o_wide_mux_819_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<13:11>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_rand[15]_GND_8_o_wide_mux_824_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <rand<15:13>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_PWR_9_o_PWR_9_o_mux_126_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <timer0>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_PWR_9_o_PWR_9_o_mux_106_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <timer1>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2990> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <point<3:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2993> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <point[6]_PWR_9_o_div_43_OUT<3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_PWR_9_o_PWR_9_o_mux_84_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <point[6]_PWR_9_o_mod_64_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <VGA_Square> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_controller>.
+The following registers are absorbed into counter <CurrentHPos>: 1 register on signal <CurrentHPos>.
+The following registers are absorbed into counter <CurrentVPos>: 1 register on signal <CurrentVPos>.
+Unit <VGA_controller> synthesized (advanced).
+WARNING:Xst:2677 - Node <temptempled_7> of sequential type is unconnected in block <VGA_Square>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 16x10-bit single-port distributed Read Only RAM       : 3
+ 16x8-bit single-port distributed Read Only RAM        : 5
+ 8x10-bit single-port distributed Read Only RAM        : 3
+# Adders/Subtractors                                   : 98
+ 10-bit adder                                          : 46
+ 10-bit subtractor                                     : 16
+ 11-bit adder                                          : 5
+ 11-bit subtractor                                     : 6
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 25-bit adder                                          : 1
+ 4-bit adder                                           : 4
+ 7-bit adder                                           : 14
+ 9-bit adder                                           : 3
+# Counters                                             : 13
+ 11-bit up counter                                     : 2
+ 14-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 2
+ 22-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 7-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 539
+ Flip-Flops                                            : 539
+# Comparators                                          : 368
+ 10-bit comparator equal                               : 7
+ 10-bit comparator greater                             : 10
+ 10-bit comparator lessequal                           : 233
+ 10-bit comparator not equal                           : 6
+ 11-bit comparator greater                             : 50
+ 11-bit comparator lessequal                           : 38
+ 17-bit comparator greater                             : 2
+ 18-bit comparator equal                               : 1
+ 25-bit comparator lessequal                           : 1
+ 27-bit comparator greater                             : 5
+ 27-bit comparator lessequal                           : 1
+ 7-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 8
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 3
+# Multiplexers                                         : 237
+ 1-bit 2-to-1 multiplexer                              : 78
+ 10-bit 2-to-1 multiplexer                             : 58
+ 11-bit 2-to-1 multiplexer                             : 2
+ 17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 3
+ 25-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 12
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 48
+ 8-bit 4-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 18
+# FSMs                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <BulletHoleY_6> has a constant value of 1 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <BulletHoleY_8> has a constant value of 1 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_1> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_2> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_3> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_4> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_5> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_6> has a constant value of 1 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_7> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_8> has a constant value of 1 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PlayerY_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <BulletHoleY_0> in Unit <VGA_Square> is equivalent to the following 7 FFs/Latches, which will be removed : <BulletHoleY_1> <BulletHoleY_2> <BulletHoleY_3> <BulletHoleY_4> <BulletHoleY_5> <BulletHoleY_7> <BulletHoleY_9> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <VGA_SQ/FSM_0> on signal <p_s[1:2]> with gray encoding.
+---------------------
+ State   | Encoding
+---------------------
+ init    | 00
+ weit    | 01
+ game    | 11
+ endgame | 10
+---------------------
+WARNING:Xst:1293 - FF/Latch <Block1X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block0X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block2X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block3X_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block3X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block4X_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block4X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block5X_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Block5X_9> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tempspeed_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempspeed_1> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempspeed_2> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tempspeed_3> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gamespeed_0> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gamespeed_1> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gamespeed_2> has a constant value of 0 in block <VGA_Square>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sevens2_7> in Unit <VGA_Square> is equivalent to the following 3 FFs/Latches, which will be removed : <sevens3_7> <sevens4_7> <sevens1_7> 
+INFO:Xst:2261 - The FF/Latch <Block5X_1> in Unit <VGA_Square> is equivalent to the following FF/Latch, which will be removed : <Block5X_4> 
+INFO:Xst:2261 - The FF/Latch <Block3X_1> in Unit <VGA_Square> is equivalent to the following FF/Latch, which will be removed : <Block3X_4> 
+INFO:Xst:2261 - The FF/Latch <Block4X_1> in Unit <VGA_Square> is equivalent to the following FF/Latch, which will be removed : <Block4X_4> 
+
+Optimizing unit <CAD971Test> ...
+
+Optimizing unit <VGA_Square> ...
+
+Optimizing unit <VGA_controller> ...
+WARNING:Xst:1293 - FF/Latch <VGA_SQ/BulletY_7_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_6_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_5_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_4_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_2_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_1_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_3_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_SQ/BulletY_0_9> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_Control/CurrentVPos_10> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <VGA_Control/CurrentHPos_10> has a constant value of 0 in block <CAD971Test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/maintimer_0> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/timer0_0> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_10> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_10> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_11> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_11> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_12> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_12> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_13> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_13> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_14> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_14> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_15> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_15> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_0> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_0> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_1> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_1> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_2> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_2> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_3> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_3> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_4> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_4> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_5> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_5> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_6> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_6> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_7> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_7> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_8> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_8> 
+INFO:Xst:2261 - The FF/Latch <VGA_SQ/bulletmovecounter_9> in Unit <CAD971Test> is equivalent to the following FF/Latch, which will be removed : <VGA_SQ/bulletcounter_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CAD971Test, actual ratio is 98.
+FlipFlop VGA_SQ/Block0X_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block0X_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block0Y_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block1X_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block1X_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block1X_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block1Y_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block1Y_6 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2X_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2X_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2X_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2Y_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2Y_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block2Y_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block3Y_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block4Y_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block4Y_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block4Y_6 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block5Y_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block5Y_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block5Y_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/Block5Y_5 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_0_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_0_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_1_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_1_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_2_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_2_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_3_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_3_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_6_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_6_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_6_3 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_7_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletX_7_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_0_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_0_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_0_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_0_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_1_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_1_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_1_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_1_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_2_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_2_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_2_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_2_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_3_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_3_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_3_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_3_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_4_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_4_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_4_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_4_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_5_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_5_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_5_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_5_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_6_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_6_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_6_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_6_4 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_7_0 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_7_1 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_7_2 has been replicated 1 time(s)
+FlipFlop VGA_SQ/BulletY_7_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <CAD971Test> :
+	Found 10-bit shift register for signal <VGA_SQ/rand_31>.
+	Found 6-bit shift register for signal <VGA_SQ/rand_21>.
+Unit <CAD971Test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 711
+ Flip-Flops                                            : 711
+# Shift Registers                                      : 2
+ 10-bit shift register                                 : 1
+ 6-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CAD971Test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6366
+#      GND                         : 1
+#      INV                         : 58
+#      LUT1                        : 146
+#      LUT2                        : 349
+#      LUT3                        : 308
+#      LUT4                        : 2582
+#      LUT5                        : 374
+#      LUT6                        : 686
+#      MUXCY                       : 1534
+#      MUXF7                       : 20
+#      VCC                         : 1
+#      XORCY                       : 307
+# FlipFlops/Latches                : 713
+#      FD                          : 17
+#      FDC                         : 91
+#      FDCE                        : 212
+#      FDE                         : 136
+#      FDPE                        : 43
+#      FDRE                        : 214
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 36
+#      IBUF                        : 8
+#      OBUF                        : 28
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             713  out of  11440     6%  
+ Number of Slice LUTs:                 4505  out of   5720    78%  
+    Number used as Logic:              4503  out of   5720    78%  
+    Number used as Memory:                2  out of   1440     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4682
+   Number with an unused Flip Flop:    3969  out of   4682    84%  
+   Number with an unused LUT:           177  out of   4682     3%  
+   Number of fully used LUT-FF pairs:   536  out of   4682    11%  
+   Number of unique control sets:        51
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  37  out of    102    36%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK_24                           | BUFGP                  | 715   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 12.093ns (Maximum Frequency: 82.691MHz)
+   Minimum input arrival time before clock: 7.307ns
+   Maximum output required time after clock: 22.102ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_24'
+  Clock period: 12.093ns (frequency: 82.691MHz)
+  Total number of paths / destination ports: 1583257 / 1485
+-------------------------------------------------------------------------
+Delay:               12.093ns (Levels of Logic = 9)
+  Source:            VGA_SQ/BulletX_5_4 (FF)
+  Destination:       VGA_SQ/Block1Y_9 (FF)
+  Source Clock:      CLOCK_24 rising
+  Destination Clock: CLOCK_24 rising
+
+  Data Path: VGA_SQ/BulletX_5_4 to VGA_SQ/Block1Y_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.525   1.665  VGA_SQ/BulletX_5_4 (VGA_SQ/BulletX_5_4)
+     LUT6:I1->O            8   0.254   0.944  VGA_SQ/Madd_BulletX[5][9]_GND_8_o_add_1727_OUT_cy<5>11 (VGA_SQ/Madd_BulletX[5][9]_GND_8_o_add_1727_OUT_cy<5>)
+     LUT3:I2->O           11   0.254   1.315  VGA_SQ/Madd_BulletX[5][9]_GND_8_o_add_1727_OUT_xor<7>11 (VGA_SQ/BulletX[5][9]_GND_8_o_add_1727_OUT<7>)
+     LUT4:I0->O            0   0.254   0.000  VGA_SQ/Mcompar_Block1X[9]_BulletX[5][9]_LessThan_353_o_lutdi3 (VGA_SQ/Mcompar_Block1X[9]_BulletX[5][9]_LessThan_353_o_lutdi3)
+     MUXCY:DI->O           1   0.181   0.000  VGA_SQ/Mcompar_Block1X[9]_BulletX[5][9]_LessThan_353_o_cy<3> (VGA_SQ/Mcompar_Block1X[9]_BulletX[5][9]_LessThan_353_o_cy<3>)
+     MUXCY:CI->O           2   0.235   1.002  VGA_SQ/Mcompar_Block1X[9]_BulletX[5][9]_LessThan_353_o_cy<4> (VGA_SQ/Block1X[9]_BulletX[5][9]_LessThan_353_o)
+     LUT4:I0->O            1   0.254   0.958  VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o1 (VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o1)
+     LUT6:I2->O           10   0.254   1.116  VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o4 (VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o4)
+     LUT2:I0->O           10   0.250   1.008  VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o9 (VGA_SQ/BulletY[0][9]_BulletY[7][9]_OR_75_o)
+     LUT6:I5->O           12   0.254   1.068  VGA_SQ/_n3823_inv1 (VGA_SQ/_n3823_inv)
+     FDE:CE                    0.302          VGA_SQ/Block1X_0
+    ----------------------------------------
+    Total                     12.093ns (3.017ns logic, 9.076ns route)
+                                       (24.9% logic, 75.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK_24'
+  Total number of paths / destination ports: 2516 / 1156
+-------------------------------------------------------------------------
+Offset:              7.307ns (Levels of Logic = 4)
+  Source:            SW<0> (PAD)
+  Destination:       VGA_SQ/BulletY_7_8 (FF)
+  Destination Clock: CLOCK_24 rising
+
+  Data Path: SW<0> to VGA_SQ/BulletY_7_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   1.328   1.369  SW_0_IBUF (SW_0_IBUF)
+     LUT5:I3->O           20   0.250   1.562  VGA_SQ/key[2]_SW[0]_AND_203_o1 (VGA_SQ/key[2]_SW[0]_AND_203_o)
+     LUT5:I1->O            1   0.254   0.910  VGA_SQ/_n4323_inv_SW0 (N23)
+     LUT6:I3->O           13   0.235   1.097  VGA_SQ/_n4323_inv (VGA_SQ/_n4323_inv)
+     FDRE:CE                   0.302          VGA_SQ/BulletY_7_0
+    ----------------------------------------
+    Total                      7.307ns (2.369ns logic, 4.938ns route)
+                                       (32.4% logic, 67.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_24'
+  Total number of paths / destination ports: 277994 / 28
+-------------------------------------------------------------------------
+Offset:              22.102ns (Levels of Logic = 14)
+  Source:            VGA_Control/CurrentVPos_2 (FF)
+  Destination:       VGA_B<1> (PAD)
+  Source Clock:      CLOCK_24 rising
+
+  Data Path: VGA_Control/CurrentVPos_2 to VGA_B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            18   0.525   1.343  VGA_Control/CurrentVPos_2 (VGA_Control/CurrentVPos_2)
+     LUT2:I0->O            3   0.250   0.766  VGA_Control/Blank_INV_22_o111 (VGA_Control/Blank_INV_22_o11)
+     LUT6:I5->O           13   0.254   1.098  VGA_Control/Blank_INV_22_o2 (VGA_Control/Blank_INV_22_o2)
+     LUT5:I4->O           55   0.254   2.290  VGA_Control/Blank_INV_22_o3 (VGA_Control/Blank_INV_22_o)
+     LUT5:I0->O           74   0.254   2.462  VGA_Control/Mmux_ScanlineY71 (ScanlineY<5>)
+     LUT6:I0->O            5   0.254   0.841  VGA_SQ/Madd_ScanlineY[10]_GND_8_o_add_1772_OUT_cy<5>11 (VGA_SQ/Madd_ScanlineY[10]_GND_8_o_add_1772_OUT_cy<5>)
+     LUT2:I1->O            2   0.254   1.002  VGA_SQ/Madd_ScanlineY[10]_GND_8_o_add_1772_OUT_xor<6>11 (VGA_SQ/ScanlineY[10]_GND_8_o_add_1772_OUT<6>)
+     LUT4:I0->O            1   0.254   0.000  VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_lut<3> (VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_lut<3>)
+     MUXCY:S->O            1   0.427   1.112  VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_cy<3> (VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_cy<3>)
+     LUT6:I1->O            1   0.254   1.112  VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_cy<4> (VGA_SQ/Mcompar_GND_8_o_ScanlineY[10]_LessThan_1774_o_cy<4>)
+     LUT6:I1->O            1   0.254   0.910  VGA_SQ/GND_8_o_GND_8_o_OR_284_o11 (VGA_SQ/GND_8_o_GND_8_o_OR_284_o11)
+     LUT5:I2->O            1   0.235   0.682  VGA_SQ/GND_8_o_GND_8_o_OR_284_o12_SW0 (N493)
+     LUT6:I5->O            3   0.254   0.874  VGA_SQ/GND_8_o_GND_8_o_OR_284_o12 (VGA_SQ/GND_8_o_GND_8_o_OR_284_o)
+     LUT5:I3->O            2   0.250   0.725  VGA_Control/Mmux_BLUE11 (VGA_B_0_OBUF)
+     OBUF:I->O                 2.912          VGA_B_0_OBUF (VGA_B<0>)
+    ----------------------------------------
+    Total                     22.102ns (6.885ns logic, 15.217ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK_24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_24       |   12.093|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 40.00 secs
+Total CPU time to Xst completion: 39.41 secs
+ 
+--> 
+
+Total memory usage is 4662616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   63 (   0 filtered)
+Number of infos    :   37 (   0 filtered)
+
